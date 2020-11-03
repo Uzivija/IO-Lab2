@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Net;
+using ServerLibrary;
 
 namespace IO_Lab2
 {
@@ -9,6 +7,8 @@ namespace IO_Lab2
     {
         static void Main(string[] args)
         {
+            AsyncTcpServer tcpServer = new AsyncTcpServer(IPAddress.Parse("127.0.0.1"), 8000);
+            tcpServer.Start();
         }
     }
 }
